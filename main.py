@@ -1,14 +1,12 @@
-day = int(input("Введите день: "))
-month = int(input("Введите месяц: "))
-
-if (month == 3 and day >= 1) or (month == 4) or (month == 5) or (month == 6 and day <= 31):
-    season = "Весна"
-elif (month == 6 and day >= 1) or (month == 7) or (month == 8) or (month == 8 and day <= 31):
-    season = "Лето"
-elif (month == 9 and day >= 1) or (month == 10) or (month == 11 and day <= 30):
-    season = "Осень"
-elif (month == 12 and day >= 1 and day <= 31) or (month == 1 and day >= 1 and day <= 31 ) or (month == 2 and day >= 1 and day <= 29 ):
-    season = "Зима"
-else: 
-    print("неправельный ввод")
-print(f"Дата: {day}.{month} относится к сезону: {season}")
+d = int(input("Введите день: ")) #Запрос даты от пользователя
+m = int(input("Введите месяц: ")) #Запрос месяца от пользователя
+if (m == 9 and  d >= 1 and d < 31 ) or (m == 10  and d >= 1 and d <= 31 ) or (m == 11 and d >= 1 and d <= 30 ): #Используем оператор ветвления if и задаем условие
+    print ("Сезон: осень") #Вывод на экран
+elif (m == 3 and d >= 1 and d <= 31 ) or (m == 4 and d >= 1 and d <= 30 ) or (m == 5 and d >= 1 and d <= 31 ): #Используем оператор ветвления elif и задаем условие
+    print ("Сезон: весна") #Вывод на экран
+elif (m == 12 and d >= 1 and d <= 31) or (m == 1 and d >= 1 and d <= 31 ) or (m == 2 and d >= 1 and d <= 29 ): #Используем оператор ветвления elif и задаем условие
+    print ("Сезон: зима") #Выведется, если условие верно
+elif (m == 6 and d >= 1 and d <= 30) or (m == 7 and d >= 1 and d <= 31) or (m == 8 and d >= 1 and d <= 31) : #Используем оператор ветвления elif и задаем условие
+    print ("Сезон: лето") #Вывод на экран
+else: #Выполнение если условие будет ложно
+    print ("Неверная дата") #Вывод на экран
